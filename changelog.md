@@ -1,6 +1,66 @@
+## Changes in version 0.7.3.0
+
+  * Correct implementations of `*>` for `Array` and `SmallArray`.
+
+  * Drop support for GHC < 7.10
+
+  * Export `runByteArray` and `runPrimArray`.
+
+  * Export `createArray` and `createSmallArray`.
+
+  * Export `emptyByteArray`, `emptyPrimArray`, `emptyArray` and `emptySmallArray`.
+
+## Changes in version 0.7.2.0
+
+  * Add `thawByteArray` and `thawPrimArray`.
+
+  * Changed the `Show` instance of `ByteArray`, so that all 8-bit words
+    are rendered as two digits. For example, display `0x0D` instead of `0xD`.
+
+## Changes in version 0.7.1.0
+
+  * Introduce convenience class `MonadPrim` and `MonadPrimBase`.
+
+  * Add `PrimMonad` and `PrimBase` instances for `Lazy.ST` (GHC >= 8.2).
+    thanks to Avi Dessauer (@Avi-D-coder) for this first contribution
+
+  * Add `freezeByteArray` and `freezePrimArray`.
+
+  * Add `compareByteArrays`.
+
+  * Add `shrinkMutableByteArray`.
+
+  * Add `Eq` instances for `MutableByteArray` and `MutablePrimArray`.
+    by Andrew Martin
+
+  * Add functions for manipulating pinned Prim Arrays
+    by Andrew Martin
+
+  * Add `copyPtrToMutableByteArray`.
+
+  * Add `NFData` instances for `ByteArray`, `MutableByteArray`,
+    `PrimArray` and `MutablePrimArray`.
+    by Callan McGill
+
+  * Add `shrinkSmallMutableArray`.
+
+  * Add `clonePrimArray` and `cloneMutablePrimArray`.
+
+  * Add `cloneMutableByteArray` and `cloneByteArray`.
+
+  * Add `Prim` instances for `WordPtr` and `IntPtr`.
+
+  * Add `NFData` instances for `Array` and `SmallArray`.
+    by Callan McGill
+
+  * Add `copyByteArrayToPtr` and `copyMutableByteArrayToPtr`.
+
+  * Export `arrayFromList` and `arrayFromListN`.
+
 ## Changes in version 0.7.0.1
 
- * Allow building with GHC 8.12.
+  * Allow building with GHC 8.12.
+    Thanks Ryan GL Scott for this and every compat patch over time.
 
 ## Changes in version 0.7.0.0
 
